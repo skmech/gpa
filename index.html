@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA-CGPA converter</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="shortcut icon" href="favicon1.jpeg" type="image/x-icon">
+</head>
+
+<body>
+    <h2><strong>Calculate your CGPA using this website - by <em>SAIKUMAR KONAKANCHI (Mechanical Engineer)</em></strong></h2>
+    <div class="login">
+        <h2><strong>Calculate your CGPA here</strong></h2>
+            <div class="textbox">
+                <input type="number" id="sgpa" placeholder="Total sum of SGPA" />
+            </div>
+            <div class="textbox">
+                <input type="number" id="semesters" placeholder="Total no of semesters" />
+            </div>
+            <button onclick="calculateCGPA()">CALCULATE</button>
+            <div class="textbox">
+                <button id="result">Output</button>
+            </div>
+    </div>
+    <div class="calculator">
+
+        <input type="text" class="screen" id="screen" placeholder="0">
+
+        <button class="symbol" onclick="wipe()">AC</button>
+        <button class="symbol" onclick="wipe()">C</button>
+        <button class="symbol" onclick="show('/')">/</button>
+        <button class="symbol" onclick="show('*')">*</button>
+
+        <button class="number" onclick="show('7')">7</button>
+        <button class="number" onclick="show('8')">8</button>
+        <button class="number" onclick="show('9')">9</button>
+        <button class="symbol" onclick="show('-')">-</button>
+
+        <button class="number" onclick="show('4')">4</button>
+        <button class="number" onclick="show('5')">5</button>
+        <button class="number" onclick="show('6')">6</button>
+        <button class="symbol" onclick="show('+')">+</button>
+
+        <button class="number" onclick="show('1')">1</button>
+        <button class="number" onclick="show('2')">2</button>
+        <button class="number" onclick="show('3')">3</button>
+        <button class="symbol" onclick="show('.')">.</button>
+
+        <button class="number" onclick="show('(')">(</button>
+        <button class="number" onclick="show('0')">0</button>
+        <button class="number" onclick="show(')')">)</button>
+        <button class="symbol" onclick="calc('=')">=</button>
+
+    </div>
+        <h3><em>In the mean time listen to music!</em></h3>
+        <audio src="song1.mp3" controls>Urike Urike Song!</audio>
+        <audio src="song2.mp3" controls>Aarambhamele</audio>
+    <script>
+        let display = document.getElementById('screen');
+    
+    const wipe = () => {
+    display.value = '';
+    }
+    
+    const show = (n) => {
+    display.value += n;
+    }
+    
+    const calc = () => {
+    display.value = eval(display.value);
+    }
+    </script>
+    <script>
+        function calculateCGPA() {
+  let sgpa = parseFloat(document.getElementById("sgpa").value);
+  let semesters = parseFloat(document.getElementById("semesters").value);
+  let cgpa = sgpa / semesters;
+  document.getElementById("result").innerHTML = 'Your CGPA is: '+cgpa;
+}
+    </script>
+</body>
+
+</html>

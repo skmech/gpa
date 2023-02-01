@@ -1,0 +1,221 @@
+* {  box-sizing: border-box; }
+html, body {
+  height: 100%;
+}
+@keyframes pan {
+  100% { background-position: 15% 50%;}
+}
+body {
+  display: grid;
+  place-items: center;
+  margin: 0px;
+  padding: 0 24px;
+  background-image: url(bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: pan 5s infinite alternate linear;
+  
+}
+
+
+@media (width >=500px) {
+  body {padding: 0px;}
+}
+.login {
+  width: 90%;
+  padding: 70px 30px 44px;
+  border-radius: 22px;
+  background: #161616;
+  text-align: center;
+  margin-right: 750px;
+  margin-bottom: 50px;
+}
+
+
+@media (width >=450px) {
+  .login { width: 380px;}
+}
+
+
+.login > h2 {
+  color: rgba(255, 255, 255, 0.38);
+  margin: 10px 10px 30px;
+  font-weight: 500;
+  font-size: 22px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   text-align: center;
+}
+
+h2 {
+  color: #f9f9f9;
+  margin: 10px 10px 30px;
+  font-weight: 500;
+  font-size: 22px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+audio {
+  margin-left: 830px;
+}
+.login {
+  display: grid;
+  gap: 16px;
+  place-items: center;
+  width: 30%;
+  margin: 0;
+  color: #f9f9f9;
+  margin-right: 850px;
+}
+h3 {
+  margin-left: 830px;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 0px;
+}
+.textbox {
+  width: 100%;
+  position: relative;
+}
+
+.login input,
+.login button {
+  width: 100%;
+  height: 60px;
+  outline: none;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  border-radius: 50px;
+  transition: .15s ease-in;
+}
+.login button:hover {
+  background: yellowgreen;
+}
+
+
+.login input {
+  background: transparent;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  font-size: 18px;
+  padding: 0 20px 0 50px;
+  color: inherit;
+}
+
+.login input:focus {
+  border-color: #157ae1;
+}
+
+.login button {
+  cursor: pointer;
+  background: #157ae1;
+  color: #f9f9f9;
+  border: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.calculator {
+  background: #161616;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .75rem;
+  width: 325px;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  padding: .75rem;
+  border-radius: 1rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-right: 300px;
+  margin-top: 50px;
+}
+
+@media (width >=450px) {
+  .calculator { width: 300px;}
+}
+
+
+.screen {
+  grid-column: 1 / 5;
+  border-radius: .75rem;
+  font-size: 2rem;
+  height: 6rem;
+  color: #fff;
+  background: #333849;
+  text-align: end;
+  padding: .5rem;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.symbol,
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 1;
+  font-size: 1.25rem;
+  color: #fff;
+  border-radius: 50%;
+  transition: .15s ease-in;
+}
+
+.symbol {
+  background: #5d68e2;
+}
+
+.symbol:hover {
+  background: yellowgreen;
+}
+
+.number {
+  background: #333849;
+}
+
+.number:hover {
+  background: yellowgreen;
+}
+
+
